@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button, a {
+    all: initial;
+}
+
+nav {
+
+    border-bottom: solid black 1px;
+    background-color: #FFFADD;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 40px;
+    flex-wrap: wrap;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 50px;
+}
+
+nav > ul > li > a {
+    font-size: 20px;
+}
+
+nav > ul > li > a:hover {
+    cursor: pointer;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.nav-right {
+    margin-left: auto;
+    gap: 50px;
+}
+
+.nav-right > button {
+    border: solid black 1px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    padding-top: 20px;
+}
+
+main > h2 {
+    padding-bottom: 20px;
+}
+
+.feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.tweet {
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.tweet:nth-child(3n) {
+    grid-column: 1 / 3;
+}
+
+
+
+.tweet-header {
+    display: flex;
+}
+
+.tweet-header > .profile-picture {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: solid black 1px;
+    margin: 7px;
+}
+
+.tweet-header > div {
+    padding-top: 5px;
+}
+
+.tweet-handle {
+    font-style: italic;
+    color: rgb(64, 63, 63);
+}
+
+.tweet-content {
+    padding: 10px;
+    padding-top: 5px;
+}
+
+
+
+
+
+
+
+
+.column-right {
+    display: flex;
+    justify-content: center;
+}
+
+
+.recommended-topics{
+    border: solid black 1px;
+    border-radius: 10px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    padding: 10px;
+}
+
+.recommended-topics > h2 {
+    padding-bottom: 20px;
+}
+
+.recommended-topics > p {
+    padding-bottom: 5px;
+}
+
+@media screen  and (max-width: 1000px) {
+    .feed {
+       grid-template-columns: 1fr;
+    }   
+   
+    .tweet:nth-child(3n) {
+        grid-column: 1;
+    }
+
+    .grid-content {
+        grid-template-columns: 100%;
+        padding-inline: 20px;
+    }
+
+    aside {
+        order: 1;
+    }
+
+    main {
+        order: 2;
+    }
+}
