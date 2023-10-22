@@ -23,8 +23,8 @@ nav {
 nav > ul {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
-    flex-grow: 1;
     flex-wrap: wrap;
 }
 
@@ -157,19 +157,11 @@ main > h2 {
     main {
         order: 2;
     }
-
-    nav > ul {
-        flex-grow: 0;
-    }
 }
 
 @media screen and (max-width: 650px) {
     nav {
         padding-inline: 10px;
-    }
-
-    nav > ul {
-        justify-content: center;
     }
 
     nav > ul > li > a {
